@@ -116,7 +116,7 @@ const TextArea = () => {
           
             <div className="editor-container relative border border-8 rounded-lg" style={{ width: "60vw", height: "70vh", marginTop: "10vh" }}>
 
-                {/* Hidden mirror div for sizing */}
+                
                 <div
                     ref={mirrorDivRef}
                     className="mirror-div invisible whitespace-pre-wrap absolute"
@@ -135,7 +135,7 @@ const TextArea = () => {
                     }}
                 />
 
-                {/* Main textarea for document content */}
+               
                 <textarea
                     ref={textareaRef}
                     value={documentContent}
@@ -148,7 +148,6 @@ const TextArea = () => {
                     onKeyUp={handleSelectionChange}
                 />
 
-                {/* Overlay for user cursors */}
                 {Object.keys(userCursors).map((userId) => {
                     const position = userCursors[userId];
                     const userColor = "green";
