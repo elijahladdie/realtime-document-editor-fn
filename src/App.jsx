@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import TextArea from "./components/TextArea";
-// import TextEditor from "./components/TextEditor"; // Assuming this is your text editor component
 
 const App = () => {
-  const [isEditorVisible, setIsEditorVisible] = useState(false); // Track whether to show the editor
+  const [isEditorVisible, setIsEditorVisible] = useState(false); 
   const startedtyping = localStorage.getItem("startedTyping");
   useEffect(()=>{
     if(startedtyping){
@@ -11,14 +10,14 @@ const App = () => {
     }
   },[])
  
-  // Function to handle the button click
+  
   const handleStartDocument = () => {
-    setIsEditorVisible(true); // Show the text editor
+    setIsEditorVisible(true); 
   };
 
   return (
     <div className="app-container">
-      {/* If the editor is not visible, show the landing page */}
+      
       {!isEditorVisible ? (
         <div className="landing-page flex flex-col items-center justify-center h-screen bg-gray-100">
           <h1 className="text-4xl font-bold mb-6">
